@@ -14,7 +14,8 @@
   "background": {
     "persistent": true,
     "scripts": [
-      "res/js/jquery-3.3.1.js", "res/js/background.js"
+      "res/js/jquery-3.3.1.js",
+      "res/js/background.js"
     ]
   },
   "default_locale": "zh_CN",
