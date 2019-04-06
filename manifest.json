@@ -1,36 +1,58 @@
 {
+  // 参考：https://developer.chrome.com/extensions/manifest
+  // ----------
+  "manifest_version": 2,
   "name": "bbscrawler",
   "version": "1.0.0",
+  // ----------
+  "default_locale": "zh_CN",
+  "description": "bbs crawler",
   "icons": {
-    "128": "res/img/community_128px.png",
-    "32": "res/img/community_32px.png",
-    "64": "res/img/community_64px.png"
+    "16": "res/img/community_32px.png",
+    "48": "res/img/community_64px.png",
+    "128": "res/img/community_128px.png"
   },
+  // ----------
   "browser_action": {
+    "default_icon": {
+      "16": "res/img/community_32px.png",
+      "24": "res/img/community_32px.png",
+      "32": "res/img/community_32px.png"
+    },
     "default_title": "bbscrawler",
-    "default_icon": "res/img/community_32px.png",
     "default_popup": "res/html/index.html"
   },
+  // page_action
+  // ----------
   "background": {
-    "persistent": true,
     "scripts": [
       "res/js/jquery-3.3.1.js",
       "res/js/background.js"
-    ]
+    ],
+    "persistent": true
   },
-  "default_locale": "zh_CN",
-  "description": "bbs crawler",
-  "manifest_version": 2,
+  "homepage_url": "http://kandiandata.oa.com",
   "minimum_chrome_version": "26.0",
-  "options_page": "res/html/options.html",
+  "options_ui": {
+    "chrome_style": true,
+    "page": "res/html/options.html"
+  },
   "permissions": [
+    // 标签
     "tabs",
+    // web请求
     "webRequest",
     "webRequestBlocking",
+    // 可以通过executeScript或者insertCSS访问的网站
     "http://*/*",
+    // 可以通过executeScript或者insertCSS访问的网站
     "https://*/*",
+    // 右键菜单
     "contextMenus",
+    // 通知
     "notifications",
-    "proxy"
+    "proxy",
+    // 存储
+    "storage"
   ]
 }

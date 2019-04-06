@@ -1,14 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<link lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="shortcut icon" type="image/x-icon" href="../img/community_32px.png">
     <title>bbscrawler</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+
+    <style>
+        body {
+            width: 200px;
+            padding: 10px;
+        }
+    </style>
 </head>
+
 <body>
-<header>
-    <span class="title">bbscrawler, haha...</span>
-</header>
+<div class="container">
+    <div class="row" style="padding-bottom: 10px">
+        <h4>bbscrawler，你好...</h4>
+    </div>
+    <div class="row" style="padding-bottom: 10px">
+        <label for="key">监控关键词</label>
+        <input type="text" class="form-control" id="key" placeholder="请输入，多个关键词用|分割">
+    </div>
+    <div class="row" style="padding-bottom: 10px">
+        <button type="button" class="btn btn-primary" id="post">提交</button>
+    </div>
+</div>
 </body>
-<script type="text/javascript" src="../js/index.js"></script>
+
 </html>
